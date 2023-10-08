@@ -34,7 +34,7 @@ def simulation_AEF_ID(AEF, word):
     Cstate = AEF["Istate"]
     for char in word:
         if char not in AEF["Alphabet"] :
-            print("Error, the char ", char, " doasn't exist.")
+            print("Error, the char ", char, " doesn't exist.")
             return False
         if char not in AEF["Transition"][Cstate]:
             #print("Error, No transaction form ", Cstate, " with the char ", char)
@@ -45,9 +45,9 @@ def simulation_AEF_ID(AEF, word):
         return True
     else: return False
 
-print("Welcome.\nThis application test if the ID of a variable is correct or no.\nWhat is your ID to check if its valiable : ")
+print("Welcome.\nThis application test if the ID of a variable is correct!\nWhat is your ID to check if it is available : ")
 ID = input()
-resultat = simulation_AEF_ID(AEF_ID, ID)
-if resultat:
+result = simulation_AEF_ID(AEF_ID, ID)
+if result:
     print("The id is correct")
 else: print("The id is not correct, make sure that he start's with a leter first or \"_\".")
